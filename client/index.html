@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' type='css' href='styles.css'>
+  </head>
+  <body>
+  
+    <div class="topbar">
+      <div class="scoreboard">
+        <!-- Modify the scoreboard when important events occur in your game! -->
+        <div class="highScoreBar">High: <span id="highScore">0</span></div>
+        <div class="scoreBar">Current: <span id="currentScore">0</span></div> 
+        <div class="collisionBar">Collisions: <span id="collisionNum">0</span></div>
+      </div>
+    </div>
+
+    <div class="chatArea">
+      <ul id="messages"></ul>
+      <form action="">
+        <input id="m" autocomplete="off" /> <button>Send</button>
+      </form>
+    </div>
+
+    <div class="gameArea">
+    </div>
+
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="/jquery-1.11.3.js"></script>
+    
+    <script>
+      var socket = io();
+      $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('chat message', function(msg){
+        $('#messages').append($('<li>').text(msg));
+      });
+    </script>
+    
+    <script src="lib/d3.js" charset="utf-8"></script>
+    <script src='watchout.js'></script>
+  </body>
+
+</html>

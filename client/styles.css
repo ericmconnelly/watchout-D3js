@@ -1,0 +1,125 @@
+/* your beautiful css styling goes here! */
+
+/* Note: an asteroid image is included in this repo.
+Feel free to use it if you like. */
+
+body, html{
+  height:100%;
+
+}
+body{
+  font: 13px Helvetica, Arial;
+  margin: 0px;
+  background-image: url(img/back.jpg);
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+svg {
+  background-color:rgba(255,255,255,0.4);
+  border: 3px solid black;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.scoreboard {
+  display: inline-table;
+  color: black;
+  font-family: arial;
+  width: 130px;
+  height: 65px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.gameArea {
+  display: inline-block;
+  height: 850px;
+}
+
+.chatArea {
+  float: left;
+  background-color: rgba(255,255,255,0.4);
+  border: 3px solid black;
+  margin: 40px;
+  height: 750px;
+  width: 425px;
+  box-sizing: border-box;
+}
+
+.topbar {
+  background-color: rgba(85, 85, 85, 0.4);
+  color: rgb(173, 216, 230);
+  padding: 10pt;
+  display: block;
+  height: 110px;
+  width: 100%;
+}
+
+.highScoreBar,
+.scoreBar,
+.collisionBar{
+  opacity: 0.9;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 5px;
+  display: block;
+  width: 100px;
+  height: 18px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.highScoreBar{
+  background-color: lightgreen;
+}
+
+.scoreBar{
+  background-color: yellow;
+}
+
+.collisionBar{
+  background-color: red;
+}
+
+form { 
+  background: #000; 
+  padding: 3px; 
+  position: fixed; 
+  bottom: 81px;
+  width: 415px;
+}
+form input { 
+  border: 0; 
+  padding: 9px; 
+  width: 330px; 
+  margin-right: 5px; 
+}
+      
+form button { 
+  width: 50px; 
+  background: rgb(130, 224, 255); 
+  border: none; 
+  padding: 8px; 
+}
+      
+#messages { 
+  background-color: white;
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+#messages li { 
+  padding: 5px 10px; 
+}
+#messages li:nth-child(odd) { 
+  background: #eee; 
+}

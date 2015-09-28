@@ -1,0 +1,24 @@
+{
+    "name": "watchout-socket.io",
+    "version": "0.1.0",
+    "description": "watchout socket.io chat app",
+    "dependencies": {
+      "express": "4.10.2",
+      "socket.io": "1.2.0"
+    },
+
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "nate-meier-and-eric-le",
+  "license": "ISC",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:protected-brushlands-4157.git"
+  }
+}
